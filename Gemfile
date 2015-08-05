@@ -24,6 +24,8 @@ gem 'mongoid', '~> 5.4'
 gem 'mongoid_rails_migrations'
 gem 'rack-ssl', require: 'rack/ssl' # force SSL
 gem 'rack-ssl-enforcer', require: false
+gem 'rack-cors', :require => 'rack/cors' # CORS headers
+
 gem 'rails_autolink'
 gem 'useragent'
 

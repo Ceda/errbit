@@ -50,5 +50,12 @@ module Errbit
     config.to_prepare { Devise::Mailer.layout 'mailer' }
 
     config.active_job.queue_adapter = :sucker_punch
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
   end
 end
